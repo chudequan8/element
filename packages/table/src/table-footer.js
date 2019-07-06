@@ -64,10 +64,7 @@ export default {
                 colspan={ column.colSpan }
                 rowspan={ column.rowSpan }
                 class={ this.getRowClasses(column, cellIndex) }>
-                <div class={ ['cell', column.labelClassName] }>
-                  {
-                    sums[cellIndex]
-                  }
+                <div class={ ['cell', column.labelClassName] } v-html="sums[cellIndex]">
                 </div>
               </td>)
             }
